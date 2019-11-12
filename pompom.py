@@ -1,13 +1,11 @@
 from sys import argv
 from tqdm import tqdm
 from time import sleep
-from playsound import playsound
 from pymsgbox import alert
 
 def interval(num, desc):
     for _ in tqdm(range(int(num) * 60), desc=desc):
         sleep(1)
-    playsound('simple.wav')
     alert('{} has completed!'.format(desc), '{} Alert'.format(desc))
 
 def getArgs():
